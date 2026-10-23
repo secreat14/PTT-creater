@@ -1,0 +1,47 @@
+# AI project entry point
+
+@rules/README.md
+
+Before development, modification, commits, tests, deployment or documentation work, read `rules/README.md` in full and follow its task routing.
+
+Before the first substantive modification, provide the rules-reading receipt defined there. Before every final conversational reply, including ordinary chat and read-only review, and before committing, provide its eight-field completion-review receipt. Receipts report results; they do not request approval. Read-only tasks stay unregistered; minimum registration and missing-file initialization follow `rules/README.md`.
+
+Also read:
+
+1. `FINAL_GOAL.md`
+2. `TODO.md`
+3. `AI_TASKS.md`
+4. Task-related Markdown in the relevant service directory.
+
+For parallel tasks, locate the authoritative index under rule 14. A worktree snapshot is not a live ownership record. `rules/README.md` is the single source of public control rules; do not duplicate the full rules here.
+
+## Project-specific notes
+
+Maintain only concise project guidance here. Do not remove the import, required reading or public-rule priority. Put detailed requirements in `rules/` and progress in `TODO.md`/`AI_TASKS.md`.
+
+- Project name: Saplingagent. Local Agent, workspace, app-builder, MCP and Skills are implemented. The starting point is a single chat page; default controls are independent kernel/restart controls; optional legacy Git modules remain application-owned. Check goal/status files for actual validation and limits.
+- New persistent project processes must participate in Restart app: use conventional backend discovery or config/services.json, including dependencies and readiness. See kernel/services/runtime-manager/CONTRACT.md and docs/project-services.html; the AI creating the feature completes this integration.
+- Source directories: frontend `front/`, backend services `backend/`, human HTML documentation `docs/`. `services/` is an index only; public-rule service path examples map to actual backend directories.
+- Full Access is the user's explicit decision: frontend/chat/main/backend/MCP/Skills/dependencies/configuration may be edited as the current OS user, with no MCP directory allowlist or mandatory compilation/per-operation confirmation. This does not elevate to root. Restore only on explicit user request; see `backend/app-builder/`.
+- Runtime task registration is nonblocking and records actual modifications, without copying conversation text. Runtime records do not establish human acceptance, Git approval or publication completion. Earlier protected-directory policies in historical TASK005–009 were superseded by TASK010–013.
+- Customer repositories keep their own branch policy. Installation defaults to release unless explicitly configured; upstream maintainer branches do not constrain this application.
+- Repository/install documentation and UI are English. Preserve protocol IDs, actual filesystem paths and existing user conversation data. Project-owned source uses PolyForm Noncommercial 1.0.0; separate commercial permission does not grant third-party authentication rights.
+
+- Customer delivery (kernel0.9.5): release source snapshot with no Git metadata, Git initialization, storage prompt or default Git/version controls. Never erase an existing customer's Git on reinstall/update. Users can independently create their own repository; publication needs their explicit instruction. Maintainer branches remain main/adobe-replica/release.
+
+- Maintainer owner instruction (2026-10-12): after appropriate self-checks, synchronize authorized work directly to main and push without another confirmation. See rule04 for scope. Report actual verification and do not invent human acceptance. This standing authorization belongs to the original maintainer repository and does not transfer to recipient projects. Follow the main-first and release-only showcase policy in rule04. An explicit main-only request leaves release untouched; other branches synchronize only within the requested scope.
+
+- The independent kernel covers install/update, complete restart, AI connection/configuration and engine adapters; read kernel/CONTRACT.md and kernel/DEPLOY.md. Chat UI, workspace/context, page builder/read, MCP and all default/custom Skills/plugin registrations are application-owned and freely editable, including mixed application entries/styles/build/dependency files. Kernel updates/restores do not own those paths. Full Access is unchanged. Never regenerate a recipient baseline to hide local core edits; maintainer-owned core changes regenerate/check the manifest before publication. Schema3 isolates core UI/dependencies and releases legacy Git/React controls; it replaces schema2 and the unreleased broad prototype and rejects obsolete automatic update/recovery plans.
+
+- Customer launcher workflow: script prepares the local kernel; A copies a self-contained configuration capsule outside the project and exits; B saves project/AI settings, stops owned processes, renames and builds the native app in the final project; B hands back to A and exits; A verifies ownership/exit and deletes the external capsule. Opening the tiny app checks/installs local dependencies and starts the project. Preserve full-folder source/data/Git and unchanged Full Access. See kernel/configuration/CONTRACT.md and kernel/launcher/CONTRACT.md.
+
+- macOS apps remain ordinary Dock applications. Normal Quit/Command-Q stops only their owned startup and existing project services; closing a browser tab does not stop them. Configuration must wait for native app/helper exit before rename or launcher replacement. Existing exported apps need an explicit rebuild for changed native behavior; preserve the application cluster and Agent Full Access.
+
+- Before publication, verify the exact code/main SHA, then the declared kernel version, release SHA/tag and downloaded package metadata. Follow contracts/release.md and scripts/verify-release.mjs; use the owner-selected kernel version without inventing an increment. Preserve public tags by default; explicit owner correction of a mistaken label requires old-target/publication evidence and expected-old-value checks. Saplingagent has one version: the kernel version from kernel/manifest.json, currently0.9.5. Git SHAs identify source; legacy product/release fields are compatibility aliases.
+
+- All platform implementation and the setup website belong in `kernel/`; see `kernel/AGENTS.md` and `kernel/CONTRACT.md`. Ordinary application features belong outside it and register services through `config/services.json`. External compatibility files are forwarding entries only. Explicit user-requested kernel maintenance remains possible with unchanged Full Access.
+
+- Configuration storage: derive managed paths from the actual project. Temporary configuration B runs only in a session-owned direct sibling `../sapling-config-*`; persistent config/cache/data/output stays project-local. No system-temp/home fallback. Internal canonical ownership paths and explicit read-only account imports are valid; Agent Full Access is unchanged. See docs/configuration-storage.html and kernel/configuration/CONTRACT.md.
+
+- This macOS source package comes from commit 8becd7416ba933d250e8cf5fa12f6683b5e0054d. Task records are initialized for this application. See docs/macos-install.html; developer approvals do not transfer.
+- This release snapshot has no Git metadata. Installation does not initialize Git or connect remotes. Existing customer Git survives reinstall and kernel maintenance. Publication always needs explicit customer authorization.

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": 2,
+  "kernelVersion": "0.9.5",
+  "releaseVersion": "0.9.5",
+  "sourceRef": "release",
+  "sourceCommit": "8becd7416ba933d250e8cf5fa12f6683b5e0054d",
+  "platform": "macOS",
+  "initializeRecords": false,
+  "distribution": {
+    "source": "release-archive",
+    "gitIncluded": false
+  },
+  "recordHashes": {
+    "AGENTS.md": "1b13e9258006e89b351ac80c020655548272c2cf56f163f8673aaf6086289b70",
+    "FINAL_GOAL.md": "29aadd56990a5682bc4b25228d10d164e4f037cac482e0ca6fb4453554be1d86",
+    "TODO.md": "aad2c336faed4e9b0b5196037415bf94c6ae8f5269cadc93422218aae356fee7",
+    "AI_TASKS.md": "f15d63141a9f119b255978b06ff76e724ffbae0daa217c7bfcbea4c52c94ff9f"
+  }
+}
