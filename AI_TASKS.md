@@ -9,7 +9,7 @@
 
 ## Current tasks
 
-- `TASK-20261023-012` — Codex/root; project-level repository initialization and authorized publication of the current application snapshot to `https://github.com/secreat14/PTT-creater.git` on `main`. Scope: inspect and exclude credentials/runtime/cache/log/dependency/build artifacts, initialize this application folder as its own Git repository, create the initial `main` commit, configure the requested remote and push, then verify the remote branch SHA. Preserve the parent repository and sibling projects. Runtime attribution: `RUN-80b0f3fb-a15c-4c51-a083-06fac9601517`. Status: registered/in progress.
+None. agent-runtime records actual runtime modifications locally. Read-only chat creates no modification task. Registration failure is not a file permission gate.
 
 <!-- seedagent-runtime-tasks:start -->
 
@@ -70,3 +70,14 @@ Verification:76/76 relevant runtime-manager/Dock/locale/setup/status tests pass 
 Preservation: prior inventory695files;467 nonkernel existing files compared. Application source, config/project identity, authentication files and existing conversation transcripts unchanged. Provider startup updated its own runtime SQLite/WAL/cache/logs and cleaned ephemeral shell/lock files; these are recorded in preservation-check.json and were not restored over live database state. Parent repository HEAD/index/config/packed-refs unchanged. Target has no own Git and remains an untracked parent subtree; no commit, push or branch changes. Maintainer main and release/tag state untouched, including the three pre-existing pending main files.
 
 Evidence and original App: .cache/kernel-upgrade-20261023-011/. Handoff:kernel/launcher/ai-tasks/TASK-20261023-011.md. Human guide:docs/kernel-upgrade-20261023.html. First status check used a double-slash URL and received HTML; corrected to the documented URL before readiness verification. CUA timed out after the first old-app Quit because the app exited; PID/port/native inventory confirmed normal termination. No unresolved upgrade or observed Quit failure; normal future AI-busy shutdown can still require finishing/cancelling work. User acceptance of daily use remains optional/unperformed.
+
+
+## TASK-20261023-012 — Current application snapshot published to GitHub main
+
+Codex/root; 2026-10-23; specification 2026-10-15.1. The user explicitly authorized publishing the latest contents of this application folder to <https://github.com/secreat14/PTT-creater.git> on `main`. Runtime attribution: `RUN-80b0f3fb-a15c-4c51-a083-06fac9601517`.
+
+The application folder was initialized as its own Git repository so the parent repository and sibling projects remain outside this publication. The initial application snapshot commit is `89d08db897220c9cbd898f87cbd8a0165e19ecfb`; it was pushed to `origin/main`, and `git ls-remote` confirmed the same SHA. A final project-record commit follows this snapshot and is reported in the completion receipt without recursively writing its own SHA into this file.
+
+Pre-publication review covered 658 files. `local-secrets/`, `data/`, `snapshots/`, `.runtime/`, `.cache/`, logs, dependencies, generated builds, local project identity and the compiled `.app` remained ignored and were not committed. No candidate file exceeded 20 MiB. The only key-shaped content hit was an explicitly synthetic test fixture. `git diff --cached --check` passed after removing two pre-existing trailing blank-space issues. Frontend `npm run build` passed and all 54 frontend tests passed. No real credentials, conversation data, runtime state or parent-repository content was published. No human acceptance is claimed.
+
+Official destination: GitHub repository <https://github.com/secreat14/PTT-creater> (`github.com`), checked by a successful authenticated Git push on 2026-10-23. Status: synchronized to `main`; no release or other branch was created or changed.
