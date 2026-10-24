@@ -9,7 +9,7 @@
 
 ## Current tasks
 
-None. agent-runtime records actual runtime modifications locally. Read-only chat creates no modification task. Registration failure is not a file permission gate.
+- `TASK-20261023-013` — Codex/root; frontend control compaction on `feature/front/settings-launcher` in the active project Worktree. Replace the embedded top-right Restart app/Kernel bar with one compact settings-icon link that opens the existing standalone kernel/settings page in a new browser page. Allowed scope: `front/App.tsx`, frontend styles/tests/service documentation and task/progress records. Preserve kernel endpoints, restart behavior inside the standalone page, chat/PPT features, data, credentials and other projects. Runtime attribution: `RUN-1998401e-ade1-4bc7-b8d1-9eb1ae114a34`. Status: implementation and self-check complete, pending human click/visual acceptance; candidate commit is reported in the delivery receipt.
 
 <!-- seedagent-runtime-tasks:start -->
 
@@ -33,7 +33,8 @@ agent-runtime maintains this section serially. Modification tools attempt to reg
 | RUN-bd0a0af7-bb1a-4ffc-9620-908004ec78f5 | completed | 2026-10-22T09:43:27.771Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-bd0a0af7-bb1a-4ffc-9620-908004ec78f5.md) |
 | RUN-6c2cc3ce-87f8-48b9-b257-362e70f87e8d | completed | 2026-10-22T15:23:22.128Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-6c2cc3ce-87f8-48b9-b257-362e70f87e8d.md) |
 | RUN-2056de49-9e54-4fe3-82be-a7385b0e75db | completed | 2026-10-22T22:14:19.877Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-2056de49-9e54-4fe3-82be-a7385b0e75db.md) |
-| RUN-80b0f3fb-a15c-4c51-a083-06fac9601517 | inProgress | 2026-10-23T21:31:08.622Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-80b0f3fb-a15c-4c51-a083-06fac9601517.md) |
+| RUN-80b0f3fb-a15c-4c51-a083-06fac9601517 | completed | 2026-10-23T22:31:46.627Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-80b0f3fb-a15c-4c51-a083-06fac9601517.md) |
+| RUN-1998401e-ade1-4bc7-b8d1-9eb1ae114a34 | inProgress | 2026-10-24T00:06:21.097Z | [Record](backend/agent-runtime/ai-tasks/runtime/RUN-1998401e-ade1-4bc7-b8d1-9eb1ae114a34.md) |
 
 <!-- seedagent-runtime-tasks:end -->
 
@@ -81,3 +82,10 @@ The application folder was initialized as its own Git repository so the parent r
 Pre-publication review covered 658 files. `local-secrets/`, `data/`, `snapshots/`, `.runtime/`, `.cache/`, logs, dependencies, generated builds, local project identity and the compiled `.app` remained ignored and were not committed. No candidate file exceeded 20 MiB. The only key-shaped content hit was an explicitly synthetic test fixture. `git diff --cached --check` passed after removing two pre-existing trailing blank-space issues. Frontend `npm run build` passed and all 54 frontend tests passed. No real credentials, conversation data, runtime state or parent-repository content was published. No human acceptance is claimed.
 
 Official destination: GitHub repository <https://github.com/secreat14/PTT-creater> (`github.com`), checked by a successful authenticated Git push on 2026-10-23. Status: synchronized to `main`; no release or other branch was created or changed.
+
+
+## TASK-20261023-013 — Compact settings launcher candidate
+
+Codex/root; 2026-10-23; specification 2026-10-15.1. On `feature/front/settings-launcher`, the application-owned 320-pixel embedded Restart app/Kernel control bar is replaced by one 40-by-40-pixel settings icon link at the top right. It opens the existing standalone `/__saplingagent/kernel` page with `target="_blank"` and `rel="noopener"`; restart, backend restart and kernel maintenance remain owned by that existing page. The read-only kernel version footer remains unchanged. No kernel source, endpoint, dependency, chat behavior, PPT data or credentials were changed.
+
+Verification: frontend `npm run build` passed with only the existing bundle-size warning. All 56 frontend tests passed, including two new settings-launcher checks for the single icon link, standalone target, retained footer and presenter isolation. Fresh rendered DOM confirmed one `40×40` fixed settings link at `(1456,12)` with a `19×19` gear icon on the 1512×827 live page. Page-image capture was unavailable from the renderer. Actual clicking/new-page behavior and human visual acceptance remain pending. Handoff: `front/ai-tasks/TASK-20261023-013.md`. The frozen candidate SHA is reported in the delivery receipt and is not recursively written into its own commit.

@@ -105,7 +105,7 @@ Footer reads additive GET /api/release (Agent contract) and shows Saplingagent p
 
 ## Product0.9.2 kernel host
 
-Default App no longer mounts optional legacy GitVersionPanel, Save version or workspace Git footer. It embeds application-owned iframes to the gateway's standalone kernel control/footer. Core UI/dependencies are independent of front's React/Vite/package manifests. Same-origin/source-checked postMessage handles panel sizing, before-restart draft save, successful reload and validated loopback maintenance navigation. The application can replace this host; direct /__saplingagent/kernel remains available. Current version control supersedes earlier default Git controls; legacy components remain optional app source, not kernel ownership.
+Default App no longer mounts optional legacy GitVersionPanel, Save version or workspace Git footer. It exposes one compact application-owned settings-icon link that opens the gateway's standalone `/__saplingagent/kernel` page in a new browser page, while the kernel version footer remains an embedded read-only frame. Restart and maintenance flows execute inside the standalone page, so the application header no longer embeds or expands the Restart app/Kernel control bar. Core UI/dependencies are independent of front's React/Vite/package manifests. Current version control supersedes earlier default Git controls; legacy components remain optional app source, not kernel ownership.
 
 ## Unified kernel version (2026-10-19)
 

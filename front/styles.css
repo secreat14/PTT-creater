@@ -1,5 +1,8 @@
 /* Styles for application features created through chat. Base chat styles live in chat/chat.css. */
 .seed-page .composer-area { padding-bottom: max(68px, calc(env(safe-area-inset-bottom) + 54px)); }
+.kernel-settings-launcher { position: fixed; z-index: 40; top: 12px; right: 16px; width: 40px; height: 40px; display: grid; place-items: center; border: 1px solid #d9e1d3; border-radius: 12px; background: #fffdfbe8; color: #526048; box-shadow: 0 7px 24px #26351c12; backdrop-filter: blur(16px); text-decoration: none; transition: border-color .16s ease, background .16s ease, color .16s ease, transform .16s ease; }
+.kernel-settings-launcher:hover { border-color: #b9c7af; background: #fff; color: #405634; transform: translateY(-1px); }
+.kernel-settings-launcher:focus-visible { outline: 2px solid #738c5f; outline-offset: 3px; }
 .version-footer { position: fixed; z-index: 28; left: 50%; bottom: max(12px, env(safe-area-inset-bottom)); min-height: 34px; max-width: calc(100vw - 28px); display: flex; align-items: center; gap: 10px; transform: translateX(-50%); border: 1px solid #dfe4da; border-radius: 999px; padding: 5px 7px 5px 12px; background: #fffefbe8; color: #7b8475; box-shadow: 0 5px 22px #26351c0d; backdrop-filter: blur(12px); font-size: 10px; }
 .version-footer-label { min-width: 0; display: inline-flex; align-items: center; gap: 5px; white-space: nowrap; }
 .version-footer { flex-wrap: wrap; justify-content: center; row-gap: 5px; }
@@ -64,7 +67,7 @@
 .git-changes li span, .git-history li span { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .git-changes > p { margin: 5px 3px 0; }
 @media(max-width: 600px) { .git-version-anchor { top: 13px; right: 16px; } .git-version-trigger { max-width: 48vw; height: 38px; } .git-version-trigger > span:not(.git-dirty-dot) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; } .git-version-popover { max-height: calc(100dvh - 68px); } .version-footer { width: calc(100vw - 24px); justify-content: center; } .version-footer-label code { max-width: 28vw; } }
-@media(prefers-reduced-motion: reduce) { .git-trigger-chevron { transition: none; } }
+@media(prefers-reduced-motion: reduce) { .git-trigger-chevron, .kernel-settings-launcher { transition: none; } }
 .git-version-trigger { max-width: min(360px, 65vw); }
 .git-version-trigger > span:not(.git-dirty-dot) { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 .git-commit-list { max-height: 228px; overflow-y: auto; }
